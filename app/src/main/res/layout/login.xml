@@ -128,7 +128,7 @@
         android:layout_height="48dp"
         android:background="#282828"
         android:ems="10"
-        android:hint="  CPF, Email ou Telefone"
+        android:hint="  CPF"
         android:inputType="text"
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -215,4 +215,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.899"
         app:srcCompat="@drawable/facebook" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="119dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
