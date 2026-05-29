@@ -59,10 +59,8 @@ class LoginActivity : AppCompatActivity() {
 
                 erro.text = "Sucesso"
 
-                // val intent =
-                //    Intent(this, PerfilActivity::class.java)
-
-                // startActivity(intent)
+                val intent = Intent(this, PerfilActivity::class.java)
+                startActivity(intent)
 
             } else {
 
@@ -81,16 +79,14 @@ class LoginActivity : AppCompatActivity() {
 
         linkCadastro.setOnClickListener {
 
-            val intent =
-                Intent(this, CadastroActivity::class.java)
+            val intent = Intent(this, CadastroActivity::class.java)
 
             startActivity(intent)
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
 
-            val systemBars =
-                insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
 
             v.setPadding(
                 systemBars.left,

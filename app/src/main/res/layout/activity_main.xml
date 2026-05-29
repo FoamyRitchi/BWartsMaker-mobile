@@ -341,7 +341,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.802"
+        app:layout_constraintVertical_bias="0.835"
         app:srcCompat="@drawable/logo" />
 
     <ImageView
@@ -353,9 +353,8 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.874"
+        app:layout_constraintVertical_bias="0.906"
         app:srcCompat="@drawable/redes" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
