@@ -162,24 +162,44 @@ class DatabaseHelper(context: Context) :
         return linhasDeletadas
     }
 
-        fun autenticarUsuario(cpfUser : String, senhaUser: String) : Boolean {
-            val db = readableDatabase
+    fun autenticarUsuario(cpfUser : String, senhaUser: String) : Boolean {
+        val db = readableDatabase
 
-            val cursor = db.rawQuery (
-                """
-                SELECT * FROM $TABLE_NAME
-                WHERE $COLUMN_CPF = ?
-                AND $COLUMN_SENHA = ?
-                """.trimIndent(),
-                arrayOf(cpfUser, senhaUser)
-            )
+        val cursor = db.rawQuery (
+            """
+            SELECT * FROM $TABLE_NAME
+            WHERE $COLUMN_CPF = ?
+            AND $COLUMN_SENHA = ?
+            """.trimIndent(),
+            arrayOf(cpfUser, senhaUser)
+        )
 
-            val usuarioExiste = cursor.count > 0
+        val usuarioExiste = cursor.count > 0
 
-            cursor.close()
-            db.close()
+        cursor.close()
+        db.close()
 
-            return usuarioExiste
+        return usuarioExiste
 
-        }
+    }
+
+    fun cpfExiste(cpfUser: String) : Boolean {
+        val db = readableDatabase
+
+        val cursor = db.rawQuery(
+            """
+        SELECT * FROM $TABLE_NAME
+        WHERE $COLUMN_CPF = ?
+        """.trimIndent(),
+            arrayOf(cpfUser)
+        )
+
+        val existe = cursor.count > 0
+
+        cursor.close()
+        db.close()
+
+        return existe
+    }
+
 }
