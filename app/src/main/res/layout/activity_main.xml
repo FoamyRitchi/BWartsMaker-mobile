@@ -197,6 +197,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
         android:layout_width="101dp"
         android:layout_height="55dp"
         app:cardBackgroundColor="#1A1A1A"
@@ -303,6 +304,58 @@
             android:layout_height="79dp"
             app:srcCompat="@drawable/produto" />
     </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="409dp"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom"
+        app:backgroundTint="#4B4B4B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="BottomAppBar" />
+
+    <TextView
+        android:id="@+id/direitosCadastro3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/copyright"
+        android:textColor="#ADADAD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="144dp"
+        android:layout_height="69dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.802"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.874"
+        app:srcCompat="@drawable/redes" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

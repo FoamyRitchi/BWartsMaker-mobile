@@ -8,6 +8,19 @@
     android:background="#FA353535"
     tools:context=".LoginActivity" >
 
+    <TextView
+        android:id="@+id/direitosCadastro2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/copyright"
+        android:textColor="#ADADAD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
     <Button
         android:id="@+id/entreGoogleBotao2"
         android:layout_width="353dp"
