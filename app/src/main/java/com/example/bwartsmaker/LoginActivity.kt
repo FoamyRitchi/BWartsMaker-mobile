@@ -60,17 +60,13 @@ class LoginActivity : AppCompatActivity() {
                 erro.text = "Sucesso"
 
                 val intent = Intent(this, PerfilActivity::class.java)
+
+                intent.putExtra(
+                    "CPF_USUARIO",
+                    cpfTexto
+                )
+
                 startActivity(intent)
-
-            } else {
-
-                Toast.makeText(
-                    this,
-                    "CPF ou senha inválidos",
-                    Toast.LENGTH_SHORT
-                ).show()
-
-                erro.text = "Erro"
 
             }
         }
@@ -79,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
 
         linkCadastro.setOnClickListener {
 
-            val intent = Intent(this, CadastroActivity::class.java)
+            val intent = Intent(this,   CadastroActivity::class.java)
 
             startActivity(intent)
         }

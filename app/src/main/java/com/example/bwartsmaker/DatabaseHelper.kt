@@ -202,4 +202,36 @@ class DatabaseHelper(context: Context) :
         return existe
     }
 
+    fun getUsuarioByCpf(cpfUser: String): Usuario? {
+
+        val db = readableDatabase
+
+        val cursor = db.rawQuery(
+            """
+        SELECT * FROM $TABLE_NAME
+        WHERE $COLUMN_CPF = ?
+        """.trimIndent(),
+            arrayOf(cpfUser)
+        )
+
+        var usuario: Usuario? = null
+
+        if (cursor.moveToFirst()) {
+
+            usuario = Usuario(
+                cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CPF)),
+                cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_NAME)),
+                cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_EMAIL)),
+                cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_SENHA)),
+                cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_DDD)),
+                cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TELEFONE))
+            )
+        }
+
+        cursor.close()
+        db.close()
+
+        return usuario
+    }
+
 }
